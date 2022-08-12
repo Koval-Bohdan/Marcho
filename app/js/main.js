@@ -12,6 +12,21 @@ $(function () {
     ratedFill: "#ffc35b",
     readOnly: true,
   });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      // Called every time handle position is changed
+
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  });
 });
 
 
