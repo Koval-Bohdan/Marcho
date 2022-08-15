@@ -1528,4 +1528,48 @@
   }
 }
 
+.product-tabs {
+  padding-top: 110px;
+  &__top {
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 40px;
+    @extend %roboto-400;
+    font-size: 22px;
+  }
+
+  &__top-item {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: inherit;
+    
+    & + .product-tabs__top-item {
+      margin-left: 55px;
+    }
+  }
+  &__top-item--active {
+    color: $title;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -11px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accent;
+    }
+  }
+
+  &__content {
+  }
+
+  &__content-item {
+    display: none;
+    &.product-tabs__content-item--active {
+      display: block
+    }
+  }
+}
+
 @import "media";
