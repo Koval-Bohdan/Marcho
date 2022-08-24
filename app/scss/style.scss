@@ -1822,4 +1822,80 @@
   }
 }
 
+.person {
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+  padding: 40px 25px;
+  text-align: center;
+  &__img {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0 auto 30px;
+  }
+  &__name {
+    color: $title;
+    @extend %roboto-700;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  &__position {
+    color: $accent;
+  }
+  &__text {
+    margin-bottom: 25px;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__social-link {
+    padding: 0 8px;
+    path {
+      fill: $default;
+      transition: all 0.5s;
+      &:hover {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.latest-post {
+  padding: 35px 30px 40px;
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+  &__title {
+    color: $title;
+    text-transform: uppercase;
+    @extend %roboto-400;
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    
+  }
+
+  &__img-link {
+  }
+
+  &__img {
+  }
+
+  &__box {
+  }
+
+  &__box-link {
+  }
+
+  &__box-title {
+  }
+
+  &__box-date {
+  }
+}
+
 @import "media";
