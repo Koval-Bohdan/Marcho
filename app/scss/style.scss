@@ -1876,25 +1876,46 @@
   }
 
   &__item {
-    
+    margin-bottom: 20px;
+    display: flex;
+    & + .latest-post__item {
+      border-top: 1px solid #ececec;
+      padding-top: 20px;
+    }
   }
 
   &__img-link {
+    display: block;
+    margin-right: 20px;
+    min-width: 80px;
   }
 
   &__img {
-  }
-
-  &__box {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
   }
 
   &__box-link {
-  }
-
-  &__box-title {
+    color: $title;
+    @extend %roboto-400;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   &__box-date {
+    position: relative;
+    padding-left: 26px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      background-image: url("../images/icons/calendar.svg");
+      transform: translateY(-50%);
+    }
   }
 }
 
